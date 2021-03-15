@@ -55,14 +55,17 @@ router.get('/users-list', (req, res) => {
 
 router.put('/:user_id', (req, res) => {
     var userId = mongoose.Types.ObjectId(req.query.user_id);
-    
-    User.update({_id: userId},{user_name: req.body.user_name}).then(() => {
-        return user.generateAuthToken();
-    }).then((token) => {
-        res.header('x-auth', token).send(user);
-    }).catch((e) => {
-        res.status(400).send(e);
-    });
+    if(req.body.user_name != null || req.body.user_name != undefined){
+        User.update({_id: userId},{user_name: req.body.user_name}).then(() => {
+            return user.generateAuthToken();
+        }).then((token) => {
+            res.header('x-auth', token).send(user);
+        }).catch((e) => {
+            res.status(400).send(e);
+        });
+    }else{
+        res.send({message: 'Required parameter not sent!'});
+    }
 });
 
 router.get('/me', authenticate, (req, res) => {

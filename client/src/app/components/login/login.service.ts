@@ -16,7 +16,7 @@ export class LoginService {
     
     onLoad() {
         try{
-            var user: User = JSON.parse(localStorage.getItem('shoppingCart'));
+            var user: User = JSON.parse(localStorage.getItem('userapp'));
             if(user !== undefined) {
                 this.currentUser.emit(user);
                 this.cUser = user;
@@ -49,6 +49,6 @@ export class LoginService {
     }
     logOut() {
         this.cUser = undefined;        
-        localStorage.setItem("shoppingCart", "");
+        localStorage.setItem("userapp", "");
     }
 }
