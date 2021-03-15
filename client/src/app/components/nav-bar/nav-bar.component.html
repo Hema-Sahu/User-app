@@ -1,0 +1,22 @@
+<div>
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <h2 routerLink="/">My App</h2>
+      <div class="menu">
+        <a mat-button routerLink="">Login</a>
+        <a mat-button routerLink="/users">Users</a>
+      </div>
+     <!--  <div class="search">
+        <button *ngIf="!currentUser; else infoText" class="login" mat-raised-button color="primary" routerLink="/login">Login</button>
+        <ng-template #infoText>
+            <button mat-button [matMenuTriggerFor]="menu">{{ currentUser.email }}</button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item>Profile</button>
+              <button mat-menu-item (click)="logout()">Logout</button>
+            </mat-menu>
+        </ng-template>
+      </div> -->
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>
+  

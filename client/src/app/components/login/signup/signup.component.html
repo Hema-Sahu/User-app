@@ -1,0 +1,19 @@
+<div>
+  <hr>
+  <form [formGroup]="signUpForm" (ngSubmit)="onSignUp()">
+    <mat-form-field class="full-width">
+      <input matInput inputmode="text" formControlName="username" id="username" placeholder="User Name">
+    </mat-form-field>
+    <mat-form-field class="full-width">
+      <input matInput inputmode="email" formControlName="email" id="email" placeholder="Email Address">
+    </mat-form-field>
+    <mat-form-field class="full-width">
+      <input matInput type="password" formControlName="password" id="password" placeholder="Password">
+    </mat-form-field>
+   
+      <!-- <input matInput type="number" size="10" formControlName="phno" id="phno" placeholder="Profile Pic"> -->
+      <input class="ng-hide" formControlName="profilePic" id="profilePic" multiple type="file" />
+      <button for="profilePic" mat-raised-button color="primary">Choose Files</button>
+        <button mat-raised-button color="primary" class="full-width" type="submit" [disabled]="!signUpForm.valid">Register</button>
+  </form>
+</div>

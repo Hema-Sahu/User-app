@@ -1,0 +1,12 @@
+<div>
+  <div>
+      <app-nav-bar (selectedTabName)="onNavigate($event)"></app-nav-bar>
+  </div>
+  <div class="main">
+    <div class="dashboard">
+      <router-outlet></router-outlet>
+        <!-- <app-products *ngIf="selectedTab === 'home'"></app-products>
+        <app-cart *ngIf="selectedTab === 'cart'"></app-cart> -->
+    </div>
+  </div>
+</div>

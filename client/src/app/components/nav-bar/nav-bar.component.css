@@ -1,0 +1,29 @@
+
+  h2 {
+    float:left;
+    color: rgba(133, 192, 238, 0.808);
+    margin: 8px;
+  }
+  mat-toolbar-row {
+    display: flex;
+    justify-content: space-between;
+  }
+  .menu {
+    margin-left: 10px;
+  }
+  
+  .search {
+      display: flex;
+      margin: 8px;
+      margin-left: auto;
+  }
+
+  #input-search {
+    font-size: 16px;
+    margin-right: 8px;
+  }
+
+  .login {
+
+  }
+  
