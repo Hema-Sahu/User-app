@@ -1,5 +1,4 @@
-import { NgModule, Component, OnInit } from '@angular/core';
-
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatButtonModule } from '@angular/material/button';
@@ -13,40 +12,39 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { NgxMatFileInputModule } from '@angular-material-components/file-input';
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
   imports: [
-    MatButtonModule,
+    MatButtonModule, 
     MatCardModule,
-    MatDialogModule,
+    MatDialogModule, 
     MatInputModule,
     MatListModule,
-    MatMenuModule,
-    MatIconModule,
-    MatSidenavModule,
+    MatMenuModule, 
+    MatIconModule, 
+    MatSidenavModule, 
     MatSnackBarModule,
     MatTabsModule,
     MatToolbarModule,
-    MatFormFieldModule
+    NgxMatFileInputModule,
+    MatTableModule
   ],
   exports: [
-    MatButtonModule,
+    MatButtonModule, 
     MatCardModule,
-    MatDialogModule,
+    MatDialogModule, 
     MatInputModule,
-    MatListModule,
-    MatIconModule,
+    MatListModule, 
+    MatIconModule, 
     MatMenuModule,
-    MatSidenavModule,
+    MatSidenavModule, 
     MatSnackBarModule,
     MatTabsModule,
-    MatToolbarModule
-  ],
+    MatToolbarModule,
+    NgxMatFileInputModule,
+    MatTableModule
+  ]
 })
-export class MaterialModule implements OnInit {
-
-  constructor() {}
-
-  ngOnInit() {}
-
-}
+export class MaterialModule { }

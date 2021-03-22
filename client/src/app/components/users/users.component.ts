@@ -22,14 +22,11 @@ export class UsersComponent implements OnInit {
   }
   
   ngOnInit() {
-  }
+    this.usersService.getUsers().subscribe((response) => {
+        console.log("users",response)
+        var data =  JSON.parse(response["_body"]);
 
-  getUsersList() {
-    this.usersService.getUsers()
-    .subscribe((response) => 
-      console.log("users",response)
-      );
-    this.currentUser = undefined;
+     });
   }
 
 }

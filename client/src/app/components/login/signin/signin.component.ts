@@ -35,6 +35,7 @@ export class SigninComponent implements OnInit {
         (response) => {     
           if(response.status === 200) {
             console.log('Login successfull');
+            this.router.navigateByUrl('/users'); 
           } else if(response.status === 404) {
             this.snackBar.open("You are not valid user.", "Got-it");
           }  else {

@@ -32,6 +32,7 @@ export class LoginService {
         var headers = new Headers();
         headers.append('Content-Type', 'application/json');
         var body = JSON.stringify(user);
+        console.log("this.url",this.url)
         return this.http.post(this.url+'/api/users',body, { headers: headers });
     }
 
